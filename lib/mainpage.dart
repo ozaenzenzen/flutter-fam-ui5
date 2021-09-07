@@ -106,9 +106,6 @@ class _MainPageState extends State<MainPage> {
                   top: screenUtil.setHeight(45),
                   child: Container(
                     width: screenUtil.screenWidth,
-                    // margin: EdgeInsets.symmetric(
-                    //   horizontal: screenUtil.setWidth(15),
-                    // ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
