@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_fam_ui5/fam_images.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,6 +10,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  FAMImages famImages = FAMImages();
   @override
   Widget build(BuildContext context) {
     ScreenUtil screenUtil = ScreenUtil();
@@ -27,7 +29,7 @@ class _MainPageState extends State<MainPage> {
                   width: screenUtil.screenWidth,
                   margin: EdgeInsets.symmetric(
                     vertical: screenUtil.setHeight(10),
-                    horizontal: screenUtil.setWidth(10),
+                    // horizontal: screenUtil.setWidth(10),
                   ),
                   color: Colors.transparent,
                   child: Row(
@@ -90,6 +92,7 @@ class _MainPageState extends State<MainPage> {
               ),
             ),
             Stack(
+              clipBehavior: Clip.none,
               children: [
                 Container(
                   height: screenUtil.setHeight(250),
@@ -101,11 +104,28 @@ class _MainPageState extends State<MainPage> {
                       bottomRight: Radius.circular(50.0),
                     ),
                   ),
+                  child: Container(
+                    margin: EdgeInsets.symmetric(
+                      horizontal: screenUtil.setWidth(30),
+                    ),
+                    // child: Text(
+                    //   "Welcome Back!",
+                    //   style: GoogleFonts.poppins(
+                    //     color: Colors.white,
+                    //     fontSize: screenUtil.setSp(20),
+                    //     fontWeight: FontWeight.w600,
+                    //   ),
+                    // ),
+                  ),
                 ),
                 Positioned(
                   top: screenUtil.setHeight(45),
                   child: Container(
+                    alignment: Alignment.center,
                     width: screenUtil.screenWidth,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: screenUtil.setWidth(15),
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -129,6 +149,84 @@ class _MainPageState extends State<MainPage> {
                         )
                       ],
                     ),
+                  ),
+                ),
+                Container(
+                  width: screenUtil.screenWidth,
+                  height: screenUtil.screenHeight,
+                  child: Column(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.symmetric(
+                          horizontal: screenUtil.setWidth(40),
+                        ),
+                        width: screenUtil.screenWidth,
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Welcome Back!",
+                          // textAlign: TextAlign.left,
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: screenUtil.setSp(20),
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: screenUtil.screenWidth,
+                        alignment: Alignment.center,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              height: 170,
+                              width: 130,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20),
+                                boxShadow: [
+                                  BoxShadow(
+                                    offset: Offset(0, 3),
+                                    color: Colors.indigo.shade300,
+                                    spreadRadius: 3,
+                                    blurRadius: 6,
+                                  ),
+                                ],
+                              ),
+                              child: Image.network(
+                                FAMImages.flutter_images,
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                            SizedBox(
+                              width: screenUtil.setWidth(0),
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Halo Mr. X",
+                                  style: GoogleFonts.poppins(
+                                    color: Colors.white,
+                                    fontSize: screenUtil.setSp(15),
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                Text(
+                                  "RP 320.000",
+                                  style: GoogleFonts.poppins(
+                                    color: Colors.white,
+                                    fontSize: screenUtil.setSp(20),
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
