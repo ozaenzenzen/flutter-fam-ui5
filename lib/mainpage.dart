@@ -163,7 +163,7 @@ class _MainPageState extends State<MainPage> {
                         margin: EdgeInsets.only(
                           left: screenUtil.setWidth(40),
                           right: screenUtil.setWidth(40),
-                          bottom: screenUtil.setHeight(40),
+                          bottom: screenUtil.setHeight(20),
                         ),
                         width: screenUtil.screenWidth,
                         alignment: Alignment.centerLeft,
@@ -178,10 +178,15 @@ class _MainPageState extends State<MainPage> {
                         ),
                       ),
                       Container(
+                        margin: EdgeInsets.only(
+                          left: screenUtil.setWidth(40),
+                          right: screenUtil.setWidth(40),
+                          // bottom: screenUtil.setHeight(40),
+                        ),
                         width: screenUtil.screenWidth,
                         alignment: Alignment.center,
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
@@ -205,28 +210,39 @@ class _MainPageState extends State<MainPage> {
                               ),
                             ),
                             SizedBox(
-                              width: screenUtil.setWidth(0),
+                              width: screenUtil.setWidth(30),
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Halo Mr. X",
-                                  style: GoogleFonts.poppins(
-                                    color: Colors.white,
-                                    fontSize: screenUtil.setSp(15),
-                                    fontWeight: FontWeight.w500,
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Halo Mr. X",
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                      fontSize: screenUtil.setSp(15),
+                                      fontWeight: FontWeight.w500,
+                                    ),
                                   ),
-                                ),
-                                Text(
-                                  "RP 320.000",
-                                  style: GoogleFonts.poppins(
-                                    color: Colors.white,
-                                    fontSize: screenUtil.setSp(20),
-                                    fontWeight: FontWeight.w600,
+                                  Text(
+                                    "RP 320.000",
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                      fontSize: screenUtil.setSp(20),
+                                      fontWeight: FontWeight.w600,
+                                    ),
                                   ),
-                                ),
-                              ],
+                                  Text(
+                                    "Best experience of mobile app",
+                                    softWrap: true,
+                                    style: GoogleFonts.poppins(
+                                      color: Colors.white,
+                                      fontSize: screenUtil.setSp(10),
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         ),
@@ -289,6 +305,25 @@ class _MainPageState extends State<MainPage> {
                                       ),
                                     ],
                                   ),
+                                  child:  Column(
+                                    // crossAxisAlignment: CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        CupertinoIcons.bag_fill,
+                                        color: Colors.indigo[800],
+                                        size: screenUtil.setSp(50),
+                                      ),
+                                      Text(
+                                        "Bag",
+                                        style: GoogleFonts.poppins(
+                                          color: Colors.indigo[800],
+                                          fontSize: screenUtil.setSp(15),
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                                 SizedBox(
                                   height: screenUtil.setHeight(30),
@@ -306,6 +341,25 @@ class _MainPageState extends State<MainPage> {
                                         color: Colors.indigo.shade100,
                                         blurRadius: 8,
                                         spreadRadius: 4,
+                                      ),
+                                    ],
+                                  ),
+                                  child: Column(
+                                    // crossAxisAlignment: CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        CupertinoIcons.creditcard_fill,
+                                        color: Colors.white,
+                                        size: screenUtil.setSp(50),
+                                      ),
+                                      Text(
+                                        "Card",
+                                        style: GoogleFonts.poppins(
+                                          color: Colors.white,
+                                          fontSize: screenUtil.setSp(15),
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                       ),
                                     ],
                                   ),
