@@ -35,14 +35,25 @@ class _MainPageState extends State<MainPage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      IconButton(
-                        onPressed: () {
-                          //
-                        },
-                        icon: Icon(
-                          CupertinoIcons.person_alt_circle_fill,
-                          size: 30,
-                          color: Colors.grey[850],
+                      Container(
+                        height: screenUtil.setHeight(40),
+                        width: screenUtil.setWidth(40),
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.indigo[800],
+                        ),
+                        child: IconButton(
+                          onPressed: () {
+                            //
+                          },
+                          icon: Icon(
+                            CupertinoIcons.person_alt_circle_fill,
+                            size: screenUtil.setSp(25),
+                            color: Colors.white,
+                            // color: Colors.grey[700],
+                          ),
+                          
                         ),
                       ),
                       IconButton(
@@ -52,7 +63,7 @@ class _MainPageState extends State<MainPage> {
                         icon: Icon(
                           CupertinoIcons.creditcard_fill,
                           size: 30,
-                          color: Colors.grey[850],
+                          color: Colors.grey[700],
                         ),
                       ),
                       IconButton(
@@ -62,7 +73,7 @@ class _MainPageState extends State<MainPage> {
                         icon: Icon(
                           CupertinoIcons.money_dollar,
                           size: 30,
-                          color: Colors.grey[850],
+                          color: Colors.grey[700],
                         ),
                       ),
                       IconButton(
@@ -72,7 +83,7 @@ class _MainPageState extends State<MainPage> {
                         icon: Icon(
                           CupertinoIcons.add_circled_solid,
                           size: 30,
-                          color: Colors.grey[850],
+                          color: Colors.grey[700],
                         ),
                       ),
                     ],
@@ -143,7 +154,8 @@ class _MainPageState extends State<MainPage> {
                             //
                           },
                           icon: Icon(
-                            CupertinoIcons.bell_circle_fill,
+                            CupertinoIcons.ellipsis_vertical,
+                            // CupertinoIcons.bell_circle_fill,
                             color: Colors.white,
                           ),
                         )
