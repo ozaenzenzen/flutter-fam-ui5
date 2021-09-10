@@ -249,12 +249,93 @@ class _MainPageState extends State<MainPage> {
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
-                            Text(
-                              "See More",
-                              style: GoogleFonts.poppins(
-                                color: Colors.indigo,
-                                fontSize: screenUtil.setSp(15),
-                                fontWeight: FontWeight.w500,
+                            TextButton(
+                              onPressed: () {
+                                //
+                              },
+                              child: Text(
+                                "See More",
+                                style: GoogleFonts.poppins(
+                                  color: Colors.indigo,
+                                  fontSize: screenUtil.setSp(15),
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(
+                          horizontal: screenUtil.setWidth(20),
+                        ),
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                Container(
+                                  height: screenUtil.setHeight(100),
+                                  width: screenUtil.screenWidth * 0.35,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(40),
+                                    color: Colors.white,
+                                    // color: Colors.indigo[800],
+                                    boxShadow: [
+                                      BoxShadow(
+                                        offset: Offset(0, 10),
+                                        color: Colors.indigo.shade100,
+                                        blurRadius: 8,
+                                        spreadRadius: 4,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: screenUtil.setHeight(30),
+                                ),
+                                Container(
+                                  height: screenUtil.setHeight(100),
+                                  width: screenUtil.screenWidth * 0.35,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(40),
+                                    // color: Colors.white,
+                                    color: Colors.indigo[800],
+                                    boxShadow: [
+                                      BoxShadow(
+                                        offset: Offset(0, 10),
+                                        color: Colors.indigo.shade100,
+                                        blurRadius: 8,
+                                        spreadRadius: 4,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              width: screenUtil.setWidth(30),
+                            ),
+                            Expanded(
+                              child: GestureDetector(
+                                onVerticalDragDown: (dragdown) {
+                                  //
+                                },
+                                child: Container(
+                                  height: screenUtil.setHeight(230),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(40),
+                                    color: Colors.white,
+                                    // color: Colors.indigo[800],
+                                    boxShadow: [
+                                      BoxShadow(
+                                        offset: Offset(0, 10),
+                                        color: Colors.indigo.shade100,
+                                        blurRadius: 8,
+                                        spreadRadius: 4,
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ),
                             ),
                           ],
