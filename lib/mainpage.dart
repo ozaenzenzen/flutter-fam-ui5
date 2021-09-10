@@ -156,9 +156,14 @@ class _MainPageState extends State<MainPage> {
                   height: screenUtil.screenHeight,
                   child: Column(
                     children: [
+                      SizedBox(
+                        height: screenUtil.setHeight(100),
+                      ),
                       Container(
-                        margin: EdgeInsets.symmetric(
-                          horizontal: screenUtil.setWidth(40),
+                        margin: EdgeInsets.only(
+                          left: screenUtil.setWidth(40),
+                          right: screenUtil.setWidth(40),
+                          bottom: screenUtil.setHeight(40),
                         ),
                         width: screenUtil.screenWidth,
                         alignment: Alignment.centerLeft,
@@ -222,6 +227,35 @@ class _MainPageState extends State<MainPage> {
                                   ),
                                 ),
                               ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: screenUtil.setHeight(20),
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(
+                          horizontal: screenUtil.setWidth(20),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "Activities",
+                              style: GoogleFonts.poppins(
+                                color: Colors.indigo,
+                                fontSize: screenUtil.setSp(20),
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            Text(
+                              "See More",
+                              style: GoogleFonts.poppins(
+                                color: Colors.indigo,
+                                fontSize: screenUtil.setSp(15),
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ],
                         ),
