@@ -305,8 +305,7 @@ class _MainPageState extends State<MainPage> {
                                       ),
                                     ],
                                   ),
-                                  child:  Column(
-                                    // crossAxisAlignment: CrossAxisAlignment.center,
+                                  child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(
@@ -386,6 +385,24 @@ class _MainPageState extends State<MainPage> {
                                         color: Colors.indigo.shade100,
                                         blurRadius: 8,
                                         spreadRadius: 4,
+                                      ),
+                                    ],
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        CupertinoIcons.mail_solid,
+                                        color: Colors.indigo[800],
+                                        size: screenUtil.setSp(50),
+                                      ),
+                                      Text(
+                                        "Message",
+                                        style: GoogleFonts.poppins(
+                                          color: Colors.indigo[800],
+                                          fontSize: screenUtil.setSp(15),
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                       ),
                                     ],
                                   ),
