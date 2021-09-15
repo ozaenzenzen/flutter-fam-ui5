@@ -28,11 +28,13 @@ class _MainPageState extends State<MainPage> {
       DollarMenu(),
       AddMenu(),
     ];
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       body: Container(
         height: screenUtil.screenHeight,
         child: PageView(
+          scrollDirection: Axis.horizontal,
           children: menu,
           controller: pageController,
           onPageChanged: (page) {
